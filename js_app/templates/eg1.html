@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>palindrome check</title>
+	<script type="text/javascript">
+		// data = Number(prompt('enter the number'));
+		// if(data == 1)
+		// {
+		// 	document.write("palindrome");
+		// }
+
+    data = prompt('enter your input'); 
+
+function ReverseString(str) { 
+  
+      
+    // Take empty array revArray 
+    const revArray = []; 
+    const length = str.length - 1; 
+      
+    // Looping from the end 
+    for(let i = length; i >= 0; i--) { 
+        revArray.push(str[i]); 
+    } 
+      
+    // Joining the array elements 
+    return revArray.join(''); 
+} 
+  
+rev = ReverseString(data);
+
+if(data == rev)
+{
+    document.write("palindrome");
+}
+else{
+    document.write("not");
+}
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

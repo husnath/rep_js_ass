@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>form js test 2</title>
+
+	<script type="text/javascript">
+
+		function formV(){
+			data = document.getElementById('name1');
+			if(data.value =='')
+			{
+				
+				data.style.borderColor='red';
+
+				return false;
+			}
+			else{
+				data.style.borderColor='';
+			}
+
+			
+			if (document.myForm.gender[0].checked == false && document.myForm.gender[1].checked == false) {
+				document.getElementById("aaa").style.color = "#ff0000";
+    			document.getElementById("bbb").style.color = "#ff0000";
+
+    			return false;
+			}
+			else{
+				document.getElementById("aaa").style.color = "";
+    			document.getElementById("bbb").style.color = "";
+			}
+			i = 0;
+			check=false;
+			while(i<g.length && check==false)
+			{
+				if(document.myForm.g[i].checked == true)
+				{
+					check = true;
+				}
+				i++;
+			}
+			if(check == false)
+			{
+				//alert("aaa");
+				document.getElementById("g_label").style.color = "#ff0000";
+				return false;
+			}
+			else
+			{
+
+				document.getElementById("g_label").style.color = "";
+				return true;
+			}
+			//return false;
+   }
+	</script>
+</head>
+<body>
+	<form onsubmit="return formV();" name="myForm">
+		<input type="text" name="" id="name1"><br><br>
+		<label id="gender_id">Gender</label>
+		<input type="radio" name="gender"><label id="aaa">Male</label>
+		<input type="radio" name="gender"><label id="bbb">female</label><br><br>
+		<label id="g_label">Graduation</label>
+		<input type="checkbox" name="g" value="graduate" id="g">Graduate
+		<input type="checkbox" name="g" value="post_graduate" id="p">Post Graduate
+		<br><br>
+		<input type="submit" value="SignUp">
+	</form>
+</body>
+</html>

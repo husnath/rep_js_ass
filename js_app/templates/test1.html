@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		// input = Number(prompt('enter your value'));
+		// console.log(typeof input);
+
+//print * eg 1
+
+		for(i=0;i<=6;i++){
+			for(j=0;j<=i;j++){
+				document.write("*");
+			}
+			document.write("<br>");
+		}
+//function 1
+		function sayHello(){
+			alert("Hello");
+
+		}
+
+
+//function 2
+		function my_function(){
+			a=10;
+			b=10;
+			alert(a+b);
+		}
+//// function 3 /////with parameter
+
+		function getData(a,b){
+			document.write(a+b);
+		}
+		getData(12,12);
+
+/////function 3 with parameter and return type
+
+		function getData1(a,b){
+			rs = a + b;
+			return rs;
+		}
+		document.write("<br>");
+
+		result = getData1(12,13);
+		document.write(result);
+
+/// html form
+		function formData(){
+			data = document.getElementsByClassName("uname");
+			st = true;
+			for(i=0;i<data.length;i++)
+			{
+
+				if(data.value == "")
+				{
+					data[i].style.borderColor='red';
+					st = false;
+				}
+				// else{
+				// 	data[d].style.borderColor='';
+				// }
+			}
+			return st;
+		
+		}
+  	</script>
+</head>
+<body>
+<!-- function eg 1 -->
+	<br><br><br>
+	<input type="button" value="sayHello" onclick="sayHello();" name="">
+	<br><br><br>
+
+<!-- function eg 2 -->
+	<input type="button" value="print result" onclick="my_function();" name="">
+	<br><br><br>
+
+<!-- on mouse hover -->
+
+	<input type="button" onmouseover="alert('hai');" name="" value="hai">
+	<br><br><br>
+
+<!-- form with javascript -->
+	<form>
+		<input type="text" name="username" id="name_id" class="uname">
+		<input type="text" name="username" id="name_id" class="uname">
+		<input type="text" name="username" id="name_id" class="uname">
+		<input type="text" name="username" id="name_id" class="uname">
+		<input type="submit" value="submit" onclick="return formData();">
+	</form>
+</body>
+</html>
